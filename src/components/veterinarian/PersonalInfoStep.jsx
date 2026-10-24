@@ -4,7 +4,9 @@ import { TextField, SelectField } from "./FormFields";
 export default function PersonalInfoStep({ data, onChange, errors }) {
   return (
     <div className="space-y-5">
-      <h2 className="text-lg font-semibold text-[#3D1E5C]">1. Personal Information</h2>
+      <h2 className="text-lg font-semibold text-[#3D1E5C]">
+        1. Personal Information
+      </h2>
 
       <TextField
         name="fullName"
@@ -19,6 +21,7 @@ export default function PersonalInfoStep({ data, onChange, errors }) {
         <SelectField
           name="gender"
           label="Gender"
+          required
           value={data.gender}
           onChange={onChange}
           options={["Male", "Female", "Other", "Prefer not to say"]}
